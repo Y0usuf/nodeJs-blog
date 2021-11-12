@@ -4,7 +4,7 @@
   "description": "Node.js blog projesi",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "boot" : "nodemon app.js"
   },
   "repository": {
     "type": "git",
