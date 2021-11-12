@@ -24,6 +24,17 @@ app.get('/blog', (req, res) => {
     res.render('site/blog');
 })
 
+app.get('/contact', (req, res) => {
+    res.render('site/contact');
+})
+
+app.get('/login', (req, res) => {
+    res.render('site/login');
+})
+
+app.get('/register', (req, res) => {
+    res.render('site/register');
+})
 
 app.listen(port, hostName, () => {
     console.log('Server on');
