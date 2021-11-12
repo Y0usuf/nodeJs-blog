@@ -5,10 +5,12 @@ const exphbs = require('express-handlebars');
 const port = 3000;
 const hostName = '127.0.0.1';   
 
+// statik dosyalarin yerini belirtiyoruz
 app.use(express.static('public'));
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
 
+// view engine ile alakali yaptiklarimiz. uzantisini daha kisa yaptik.
+app.engine('.hbs', exphbs({extname: '.hbs'}));
+app.set('view engine', '.hbs')
 
 app.get('/', (req, res) => {
     res.render('site/index');
